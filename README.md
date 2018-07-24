@@ -13,3 +13,5 @@ To double check it's reccommended to verify the presence of the folder /tmp/crca
 each IP address which has been scanned.
 
 ## Usage
+
+http://blog.dpsecurity.net/blog/2018/01/23/crossrat/
