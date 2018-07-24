@@ -3,7 +3,7 @@
 ## About
 CrossRatDetect is a tool to detect and remove CrossRat from infected Linux systems. Windows and MacOS are not supported yet!
 
-Note that is not a vulnerability scanner, it is a malware scanner used to identify compromised web application installations/systems. 
+Note that this is not a vulnerability scanner, it is a malware scanner used to identify compromised web application installations/systems. 
 
 ## Signs of infections
 The RAT always uses the same user agent (CrossRatSpider) to send HTTP requests during the scanning for vulnerable servers. 
