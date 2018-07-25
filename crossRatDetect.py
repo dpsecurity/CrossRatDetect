@@ -622,8 +622,13 @@ def main(argv):
 
 if __name__ == '__main__':
     start_time = time.time()
+
+    #Print the Logo
     print base64.b64decode("""ICAgX19fX18gICAgICAgICAgICAgICAgICAgX19fX18gICAgICAgXyAgIF9fX19fICAgICAgIF8gICAgICAgICAgICBfICAgDQogIC8gX19fX3wgICAgICAgICAgICAgICAgIHwgIF9fIFwgICAgIHwgfCB8ICBfXyBcICAgICB8IHwgICAgICAgICAgfCB8ICANCiB8IHwgICAgIF8gX18gX19fICBfX18gX19ffCB8X18pIHxfXyBffCB8X3wgfCAgfCB8IF9fX3wgfF8gX19fICBfX198IHxfIA0KIHwgfCAgICB8ICdfXy8gXyBcLyBfXy8gX198ICBfICAvLyBfYCB8IF9ffCB8ICB8IHwvIF8gXCBfXy8gXyBcLyBfX3wgX198DQogfCB8X19fX3wgfCB8IChfKSBcX18gXF9fIFwgfCBcIFwgKF98IHwgfF98IHxfX3wgfCAgX18vIHx8ICBfXy8gKF9ffCB8XyANCiAgXF9fX19ffF98ICBcX19fL3xfX18vX19fL198ICBcX1xfXyxffFxfX3xfX19fXy8gXF9fX3xcX19cX19ffFxfX198XF9ffA==""")
     print ""
+
+    if os.geteuid() != 0:
+        exit("Error: root privileges needed!")
     main(sys.argv[1:])
     time_taken = time.time() - start_time
     print 'Ran in %.2f seconds.' % (time_taken)
