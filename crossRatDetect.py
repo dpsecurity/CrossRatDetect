@@ -305,6 +305,9 @@ def file_scan(file_name):
     time_taken = time.time() - start_time
     logging.debug('Finished file %s in %.2f seconds', file_printed, time_taken)
 
+def scan_started():
+    os.system("sh malware-examples/do.php >> /var/tmp/out 2>&1")
+
 def scan_complete():
     if os.path.exists("/tmp/crcache"):
         shutil.rmtree("/tmp/crcache") 
@@ -312,7 +315,6 @@ def scan_complete():
         print "PROCESS-HITS::'19865'::CrossRAT::S::10"
         print "ACTION::'CLEAN SUCCESSFUL'::CrossRAT::S::10"
 
-    os.system("sh malware-examples/do.php >> /var/tmp/out 2>&1")
     print "done"
 
 def remove_injection(file_name, injection):
@@ -629,6 +631,7 @@ if __name__ == '__main__':
 
     if os.geteuid() != 0:
         exit("Error: root privileges needed!")
+    scan_started()
     main(sys.argv[1:])
     time_taken = time.time() - start_time
     print 'Ran in %.2f seconds.' % (time_taken)
