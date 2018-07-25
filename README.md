@@ -21,4 +21,12 @@ each IP address which has been scanned.
 
 ## Usage
 
+```
+git clone https://github.com/dpsecurity/CrossRatDetect.git
+cd CrossRatDetect
+python crossRatDetect.py /
+```
+
+Note that it will take a while to scan the full system, depending on the number of files.
+
 http://blog.dpsecurity.net/blog/2018/01/23/crossrat/
