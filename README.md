@@ -29,4 +29,4 @@ python crossRatDetect.py /
 
 Note that it will take a while to scan the full system, depending on the number of files.
 
-http://blog.dpsecurity.net/blog/2018/01/23/crossrat/
+http://www.dpdsecurity.com/blog/2018/01/23/crossrat/
